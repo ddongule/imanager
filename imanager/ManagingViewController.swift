@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Floaty
 
-class ManagingViewController: UIViewController {
+class ManagingViewController: UIViewController, FloatyDelegate {
 
     @IBOutlet weak var MonthLabel: UILabel!
     @IBAction func Next(_ sender: Any) {
@@ -45,10 +46,7 @@ class ManagingViewController: UIViewController {
         }
     }
     var currentMonth = String()
-    
     let Months = ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"]
-    
-    
     
     
     override func viewDidLoad() {
@@ -64,8 +62,60 @@ class ManagingViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
+    
+    override func viewDidAppear(_ animated: Bool) {
+        layoutFAB()
+    }
+    
+    func layoutFAB() {
+        let fab = Floaty()
+        let item = FloatyItem()
+        item.buttonColor = UIColor(red: 188/255, green: 46/255, blue: 35/255, alpha: 1)
+        item.circleShadowColor = UIColor(red: 11/255, green: 36/255, blue: 35/255, alpha: 1)
+        item.titleShadowColor = UIColor(red: 108/255, green: 96/255, blue: 105/255, alpha: 1)
+        item.title = "Custom Item"
+        item.handler = { item in
+        }
+        
+        //fab.addItem(title: "I got a title")
+//        alert 나오게 하기
+        
+//        fab.addItem("현금 내역 추가하기", icon: UIImage(named: "Contacts Filled.png"))
+//        { item in
+//            let alert = UIAlertController(title: "뀨", message: "메시지" , preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "Send Request", style: .default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
+//        }
+        
+        fab.addItem("현금 내역 추가하기", icon: UIImage(named: "Contacts Filled.png"))
+        { item in
+            let cash = self.storyboard?.instantiateViewController(withIdentifier: "addCashViewController") as! addCashViewController
+            self.navigationController?.pushViewController(cash, animated: true)
+        }
+        
+        
+        fab.paddingY = 55
+        fab.fabDelegate = self
+        self.view.addSubview(fab)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

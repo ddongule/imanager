@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D2EB0B547E95F110CEAA317 /* Pods_imanager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0693A506D70925E6F17ED5 /* Pods_imanager.framework */; };
 		E60431FF2081EA1700963C01 /* CalendarThings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60431FE2081EA1700963C01 /* CalendarThings.swift */; };
+		E60432012082118200963C01 /* addCashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60432002082118200963C01 /* addCashViewController.swift */; };
 		E65A2924207F4E5800BB369D /* CollegeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A2923207F4E5800BB369D /* CollegeSearchViewController.swift */; };
 		E65A2926207F56F500BB369D /* CollegeSearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A2925207F56F500BB369D /* CollegeSearchDetailViewController.swift */; };
 		E694F65F207786DF00FF168B /* UIButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E694F65E207786DF00FF168B /* UIButtonClass.swift */; };
@@ -28,6 +29,7 @@
 		A737DC12DDD0DCA957E57B49 /* Pods-imanager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imanager.release.xcconfig"; path = "Pods/Target Support Files/Pods-imanager/Pods-imanager.release.xcconfig"; sourceTree = "<group>"; };
 		CF938A2580FC8C2B78AF16B0 /* Pods-imanager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imanager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imanager/Pods-imanager.debug.xcconfig"; sourceTree = "<group>"; };
 		E60431FE2081EA1700963C01 /* CalendarThings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarThings.swift; sourceTree = "<group>"; };
+		E60432002082118200963C01 /* addCashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addCashViewController.swift; sourceTree = "<group>"; };
 		E65A2923207F4E5800BB369D /* CollegeSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeSearchViewController.swift; sourceTree = "<group>"; };
 		E65A2925207F56F500BB369D /* CollegeSearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeSearchDetailViewController.swift; sourceTree = "<group>"; };
 		E694F65E207786DF00FF168B /* UIButtonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonClass.swift; sourceTree = "<group>"; };
@@ -103,13 +105,14 @@
 				E6A6B8222076139700F7F17E /* SignupViewController.swift */,
 				E6A6B8122075EA3400F7F17E /* Main.storyboard */,
 				E6B0CB302081D62A00BA85CE /* ManagingViewController.swift */,
+				E60432002082118200963C01 /* addCashViewController.swift */,
 				E65A2923207F4E5800BB369D /* CollegeSearchViewController.swift */,
 				E65A2925207F56F500BB369D /* CollegeSearchDetailViewController.swift */,
+				E60431FE2081EA1700963C01 /* CalendarThings.swift */,
 				E6A6B8152075EA3400F7F17E /* Assets.xcassets */,
 				E6A6B8172075EA3400F7F17E /* LaunchScreen.storyboard */,
 				E6A6B81A2075EA3400F7F17E /* Info.plist */,
 				E6A6B8202075EFA100F7F17E /* GoogleService-Info.plist */,
-				E60431FE2081EA1700963C01 /* CalendarThings.swift */,
 			);
 			path = imanager;
 			sourceTree = "<group>";
@@ -216,9 +219,11 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-imanager/Pods-imanager-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Floaty/Floaty.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -226,9 +231,11 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Floaty.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -254,6 +261,7 @@
 				E65A2924207F4E5800BB369D /* CollegeSearchViewController.swift in Sources */,
 				E65A2926207F56F500BB369D /* CollegeSearchDetailViewController.swift in Sources */,
 				E6A6B80F2075EA3400F7F17E /* AppDelegate.swift in Sources */,
+				E60432012082118200963C01 /* addCashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

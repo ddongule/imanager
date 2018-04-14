@@ -11,5 +11,7 @@ target 'imanager' do
  	pod 'FBSDKLoginKit'
  	pod 'FBSDKCoreKit'
 	pod 'FBSDKShareKit'
+	pod  "Floaty"," ~> 4.0.0"
+	pod 'Eureka'
 
 end
