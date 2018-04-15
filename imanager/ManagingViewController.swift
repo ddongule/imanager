@@ -68,6 +68,7 @@ class ManagingViewController: UIViewController, FloatyDelegate {
         layoutFAB()
     }
     
+    // + 버튼 나오는거
     func layoutFAB() {
         let fab = Floaty()
         let item = FloatyItem()
@@ -75,8 +76,7 @@ class ManagingViewController: UIViewController, FloatyDelegate {
         item.circleShadowColor = UIColor(red: 11/255, green: 36/255, blue: 35/255, alpha: 1)
         item.titleShadowColor = UIColor(red: 108/255, green: 96/255, blue: 105/255, alpha: 1)
         item.title = "Custom Item"
-        item.handler = { item in
-        }
+        item.handler = { item in }
         
         //fab.addItem(title: "I got a title")
 //        alert 나오게 하기

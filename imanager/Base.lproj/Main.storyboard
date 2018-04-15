@@ -47,9 +47,6 @@
                                         <state key="normal" title="이메일로 로그인 하기">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="nz6-Is-BVe"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoH-Ct-blR">
                                         <rect key="frame" x="8" y="8" width="327" height="58"/>
@@ -93,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XpV-FU-tiA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-514.39999999999998" y="133.5832083958021"/>
+            <point key="canvasLocation" x="156" y="134"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -147,12 +144,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.97254901960784312" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="hUd-eB-26b" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3iV-SC-Eh1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TQh-nz-w2Z" secondAttribute="trailing" constant="30" id="8Y1-YI-iPM"/>
                             <constraint firstItem="ZJS-rh-7Ju" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="134" id="Cca-9I-bWU"/>
                             <constraint firstItem="ZJS-rh-7Ju" firstAttribute="top" secondItem="hUd-eB-26b" secondAttribute="bottom" constant="33" id="G6H-4w-t2F"/>
                             <constraint firstItem="hUd-eB-26b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="104" id="GK0-wC-hP7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I8o-8E-LnE" secondAttribute="trailing" constant="30" id="Htf-jh-fi4"/>
                             <constraint firstItem="TQh-nz-w2Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="JX5-Iz-4Fr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hUd-eB-26b" secondAttribute="trailing" constant="105" id="TGC-lc-Km2"/>
                             <constraint firstItem="ubZ-TV-ch2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e9H-SY-tY7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZJS-rh-7Ju" secondAttribute="trailing" constant="133" id="fII-3Z-28I"/>
                             <constraint firstItem="hUd-eB-26b" firstAttribute="top" secondItem="I8o-8E-LnE" secondAttribute="bottom" constant="25" id="jAZ-LK-Jbv"/>
@@ -176,7 +175,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="ZE7-DT-hSy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="306.39999999999998" y="132.68365817091455"/>
+            <point key="canvasLocation" x="-538" y="134"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Opv-1z-7Dq">
@@ -440,28 +439,36 @@
             </objects>
             <point key="canvasLocation" x="1934" y="1011"/>
         </scene>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="HxV-9J-LmE">
             <objects>
-                <viewController id="Slg-ih-kCy" sceneMemberID="viewController">
+                <viewController id="Slg-ih-kCy" customClass="FirstViewController" customModule="imanager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nlV-PP-qoe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRk-WQ-Mdp" customClass="UIRoundPrimaryButton" customModule="imanager" customModuleProvider="target">
-                                <rect key="frame" x="98" y="220" width="178" height="38"/>
+                                <rect key="frame" x="98" y="170" width="178" height="38"/>
                                 <color key="backgroundColor" red="1" green="0.7803921568627451" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="3tj-kQ-ROy"/>
+                                    <constraint firstAttribute="width" constant="178" id="V67-tp-RHr"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="21"/>
                                 <state key="normal" title="관리자 로그인">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NlM-i1-N5g" kind="presentation" modalPresentationStyle="overCurrentContext" id="90f-a2-0KV"/>
+                                    <action selector="loginAdminButtonPressed:" destination="Slg-ih-kCy" eventType="touchUpInside" id="yg0-lv-dbX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1m-Fc-FN3" customClass="UIRoundPrimaryButton" customModule="imanager" customModuleProvider="target">
-                                <rect key="frame" x="98" y="316" width="178" height="36"/>
+                                <rect key="frame" x="98" y="238" width="178" height="36"/>
                                 <color key="backgroundColor" red="1" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="178" id="Hrg-NL-oxO"/>
+                                    <constraint firstAttribute="height" constant="36" id="SdZ-kP-jwi"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
                                 <state key="normal" title="방문자 로그인">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -470,22 +477,70 @@
                                     <segue destination="ek9-ln-3eJ" kind="show" id="382-fi-qpG"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vta-2y-Zt7">
+                                <rect key="frame" x="16" y="332" width="343" height="315"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3w-Vw-uhR">
+                                        <rect key="frame" x="8" y="213" width="327" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="39" id="OX1-GF-2qu"/>
+                                            <constraint firstAttribute="width" constant="327" id="sA5-xF-4Od"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="22"/>
+                                        <state key="normal" title="이메일로 로그인 하기">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="LgW-oy-HeX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKR-bK-JXn">
+                                        <rect key="frame" x="8" y="144" width="327" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="39" id="5xS-ys-2zE"/>
+                                            <constraint firstAttribute="width" constant="327" id="O2M-cI-6bS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="22"/>
+                                        <state key="normal" title="카카오톡으로 로그인 하기">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.78157544140000001" blue="0.0021166941150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="n3w-Vw-uhR" firstAttribute="top" secondItem="LKR-bK-JXn" secondAttribute="bottom" constant="30" id="4Ed-el-Qs7"/>
+                                    <constraint firstItem="n3w-Vw-uhR" firstAttribute="leading" secondItem="vta-2y-Zt7" secondAttribute="leading" constant="8" id="8OW-it-eaY"/>
+                                    <constraint firstAttribute="bottom" secondItem="n3w-Vw-uhR" secondAttribute="bottom" constant="63" id="ZQc-aU-wEK"/>
+                                    <constraint firstItem="LKR-bK-JXn" firstAttribute="leading" secondItem="vta-2y-Zt7" secondAttribute="leading" constant="8" id="on8-WF-VY7"/>
+                                    <constraint firstAttribute="trailing" secondItem="n3w-Vw-uhR" secondAttribute="trailing" constant="8" id="onD-iR-bRR"/>
+                                    <constraint firstAttribute="trailing" secondItem="LKR-bK-JXn" secondAttribute="trailing" constant="8" id="rav-ND-y2h"/>
+                                    <constraint firstAttribute="width" constant="343" id="xcm-SZ-sjW"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.91002061631944442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="f1m-Fc-FN3" firstAttribute="trailing" secondItem="FRk-WQ-Mdp" secondAttribute="trailing" id="5qD-cJ-eIq"/>
-                            <constraint firstItem="FRk-WQ-Mdp" firstAttribute="centerX" secondItem="nlV-PP-qoe" secondAttribute="centerX" id="FPn-Gr-7jD"/>
-                            <constraint firstItem="f1m-Fc-FN3" firstAttribute="leading" secondItem="FRk-WQ-Mdp" secondAttribute="leading" id="Hgk-Ae-rIi"/>
-                            <constraint firstItem="f1m-Fc-FN3" firstAttribute="top" secondItem="FRk-WQ-Mdp" secondAttribute="bottom" constant="58" id="h6N-SK-Y3t"/>
-                            <constraint firstItem="FRk-WQ-Mdp" firstAttribute="leading" secondItem="poh-rP-X8P" secondAttribute="leading" constant="98" id="iiT-Fk-fM7"/>
-                            <constraint firstItem="FRk-WQ-Mdp" firstAttribute="top" secondItem="poh-rP-X8P" secondAttribute="top" constant="200" id="urv-Fk-Xyt"/>
+                            <constraint firstItem="poh-rP-X8P" firstAttribute="bottom" secondItem="vta-2y-Zt7" secondAttribute="bottom" constant="20" id="0xT-id-dma"/>
+                            <constraint firstItem="vta-2y-Zt7" firstAttribute="leading" secondItem="poh-rP-X8P" secondAttribute="leading" constant="16" id="BYP-l1-EKN"/>
+                            <constraint firstItem="FRk-WQ-Mdp" firstAttribute="leading" secondItem="poh-rP-X8P" secondAttribute="leading" constant="98.5" id="Cnt-vd-bc8"/>
+                            <constraint firstItem="vta-2y-Zt7" firstAttribute="top" secondItem="f1m-Fc-FN3" secondAttribute="bottom" constant="58" id="PvL-3E-HmW"/>
+                            <constraint firstItem="poh-rP-X8P" firstAttribute="trailing" secondItem="FRk-WQ-Mdp" secondAttribute="trailing" constant="98.5" id="QP0-x2-8w9"/>
+                            <constraint firstItem="f1m-Fc-FN3" firstAttribute="top" secondItem="FRk-WQ-Mdp" secondAttribute="bottom" constant="30" id="bnM-fX-rtB"/>
+                            <constraint firstItem="poh-rP-X8P" firstAttribute="trailing" secondItem="vta-2y-Zt7" secondAttribute="trailing" constant="16" id="byN-AF-5aW"/>
+                            <constraint firstItem="FRk-WQ-Mdp" firstAttribute="top" secondItem="poh-rP-X8P" secondAttribute="top" constant="150" id="j05-UQ-T89"/>
+                            <constraint firstItem="poh-rP-X8P" firstAttribute="trailing" secondItem="f1m-Fc-FN3" secondAttribute="trailing" constant="98.5" id="lQE-WA-G6X"/>
+                            <constraint firstItem="f1m-Fc-FN3" firstAttribute="leading" secondItem="poh-rP-X8P" secondAttribute="leading" constant="98.5" id="orf-SU-jjo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="poh-rP-X8P"/>
                     </view>
+                    <connections>
+                        <outlet property="loginAdminButton" destination="FRk-WQ-Mdp" id="XOZ-tK-nPd"/>
+                        <outlet property="loginView" destination="vta-2y-Zt7" id="eqj-X5-oV1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3d3-4F-wee" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1239" y="134"/>
+            <point key="canvasLocation" x="-1239.2" y="133.5832083958021"/>
         </scene>
         <!--Item-->
         <scene sceneID="S69-gN-7VA">
