@@ -10,7 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class popSignInViewController: UIViewController, FBSDKLoginButtonDelegate {
+class popSignInViewController: UIViewController, FBSDKLoginButtonDelegate, UIViewControllerTransitioningDelegate {
     
     //    var fbloginButton = FBSDKLoginButton()
 
