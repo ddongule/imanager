@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
 
@@ -25,6 +26,13 @@ class HomeViewController: UIViewController {
     
     @IBAction func managingButtonTapped(_ sender: Any) {
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        let isUserLoggedIn =
+//        if(!isUserLoggedIn) {
+//            self.performSegue(withIdentifier: "ViewController", sender: self)
+//        }
+//    }
     
     /*
     // MARK: - Navigation

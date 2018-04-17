@@ -32,8 +32,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     // LOG IN
                     Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                         if error == nil {
-                            self.displayAlert(title:"로그인 되었습니다", message: "")
-                            print("로그인 되었습니다.")
+//                            self.displayAlert(title:"로그인 되었습니다", message: "")
+//                            print("로그인 되었습니다.")
+//
+                            
+                            var loginAlert = UIAlertController(title: "로그인 되었습니다.", message: "", preferredStyle: UIAlertControllerStyle.alert)
+                            
+                            let loginAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default ) { action in
+                                self.dismiss(animated: true, completion: nil)}
+                            
+                            loginAlert.addAction(loginAction)
+                            self.present(loginAlert, animated: true, completion: nil)
+                            
                         } else {
                             self.displayAlert(title: "Error", message: error!.localizedDescription)
                         }
