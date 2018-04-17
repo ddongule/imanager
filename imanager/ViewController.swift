@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 
+
 class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var emailTextField: UITextField!
@@ -21,12 +22,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alertController, animated: true, completion: nil)
     }
-    
-
-  
-    //                    }
-    //                }}
-    //        }}
     
     @IBAction func loginTapped(_ sender: Any) {
 //        if emailTextField.text == "" || passwordTextField.text == "" {
@@ -45,7 +40,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     })
                 }}
         }
-    
+
     override func viewDidLoad() {
         emailTextField.delegate = self
         passwordTextField.delegate = self
@@ -73,6 +68,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         return true
     }
+    // 만약 회원가입 하러가기를 코드로 보여주려면 밑과 같이 하면 됨
+    //let signUpViewController = self.storyboard?.instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
+    //self.present(SignupViewController, animated: true)
+    
     
 }
 
