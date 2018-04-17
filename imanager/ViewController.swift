@@ -17,6 +17,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var loginButton: UIButton!
     
+    
+    
+    
     func displayAlert(title:String, message:String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -24,6 +27,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginTapped(_ sender: Any) {
+        
+        // log in을 해야지만 homeViewController 으로 가기
+        // sign up 한 유저인지 아닌지 본다.
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+                return
+            }
+            self.performSegue(withIdentifier: "signIntoHomeVC", sender: nil)
+            //print(user?.email) //이거 하면 user가 회원가입 햇는지 안햇는지 로그로 볼 수 있음
+        }
+        
+        
+        
+        
+        
+        // 정보를 제대로 입력하지 않았을 때 Alert
 //        if emailTextField.text == "" || passwordTextField.text == "" {
 //            displayAlert(title: "정보를 기입해 주세요.", message: "이메일과 비밀번호를 모두 입력하셔야 합니다.")
 //        } else {
@@ -49,6 +69,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
                         }
                     })
                 }}
+        
+        
+        
         }
 
     override func viewDidLoad() {
@@ -57,8 +80,45 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        handleTextField()
     }
+
+    
+    
+    
+    
+    //로그인 양식(이메일, 비밀번호) 다 쓰기 전까지 로그인 버튼 비활성화
+    func handleTextField() {
+        emailTextField.addTarget(self, action: #selector(ViewController.textFieldDidChange), for: UIControlEvents.editingChanged)
+        passwordTextField.addTarget(self, action: #selector(ViewController.textFieldDidChange), for: UIControlEvents.editingChanged)
+    }
+//
+//    @objc func textFieldDidChange() {
+//        guard let email = emailTextField.text, !email.isEmpty,
+//            let password = passwordTextField.text, !password.isEmpty
+//
+//            else {
+//                loginButton.setTitleColor(UIColor.lightText, for: UIControlState.normal)
+//                loginButton.isEnabled = false
+//                return
+//        }
+//        loginButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+//        loginButton.isEnabled = true
+//    }
+//
+    @objc func textFieldDidChange() {
+        if (emailTextField.text?.isEmpty)! || (passwordTextField.text?.isEmpty)! {
+            loginButton.setTitleColor(UIColor.lightText, for: UIControlState.normal)
+            loginButton.isEnabled = false
+        } else {
+            loginButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+            loginButton.isEnabled = true
+        }
+        
+    }
+    
+    
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)

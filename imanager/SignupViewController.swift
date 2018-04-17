@@ -23,6 +23,8 @@ class SignupViewController: UIViewController, UITextFieldDelegate, MFMailCompose
         self.dismiss(animated: true, completion: nil)
     }
     
+
+    
     @IBOutlet weak var signUpButton: UIButton!
     @IBAction func signUpTapped(_ sender: Any) {
         if (emailTextField.text?.isEmpty)! ||
@@ -60,7 +62,8 @@ class SignupViewController: UIViewController, UITextFieldDelegate, MFMailCompose
                         }
                     })
                 }}
-        }}
+        }
+    }
     
     func displayAlert(title:String, message:String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -68,7 +71,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate, MFMailCompose
         self.present(alertController, animated: true, completion: nil)
     }
     
-    // 이메일 보내기
+    // 이메일 보내기 - 아직 못함
     
     
     
@@ -79,6 +82,12 @@ class SignupViewController: UIViewController, UITextFieldDelegate, MFMailCompose
         passwordTextField.delegate = self
         passwordConfirmTextField.delegate = self
         super.viewDidLoad()
+        // textfield 디자인
+//        emailTextField.backgroundColor =
+//        emailTextField.tintColor =
+//        emailTextField.textColor =
+//        emailTextField.attributedPlaceholder = NSAttributedString(string: emailTextField.placeholder!, attributes: [NSForegroundColorAttributeName: UIColor(white:1.0, alpha: 0.6)])
+        
         
         // 키보드가 text field 가리는 것 해결
         let center: NotificationCenter = NotificationCenter.default;
@@ -115,6 +124,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate, MFMailCompose
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
+    // 여기까지가 키보드
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -144,6 +154,8 @@ class SignupViewController: UIViewController, UITextFieldDelegate, MFMailCompose
             textField.resignFirstResponder()
         }; return true
     }
+    
+
     
 }
 
