@@ -71,20 +71,27 @@ class FirstViewController: UIViewController, UIViewControllerTransitioningDelega
 
     // viewdidload에 설정되어있는 것은 바깥에서 인식이 안되는건가? 궁금스
     let customFBloginBtn = UIButton(type: .system)
-
+    
+    
+    
     @objc func handleCustomFBLogin() {
-        FBSDKLoginManager().logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, err) in
+        FBSDKLoginManager().logIn(withReadPermissions: [
+//            "public_profile",
+                                                        "email"], from: self) { (result, err) in
             if err != nil {
+                //에러 메시지 뜨게
                 print("Custom FB Login failed:", err!)
                 return
             }
             self.showEmailAddress()
+            self.performSegue(withIdentifier: "signIntoHomeVC", sender: nil)
         }
     }
-
     
     func showEmailAddress() {
-        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "public_profile, email"]).start {
+        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields":
+//            "public_profile,
+            "email"]).start {
             (connection, result, err) in
             if err != nil {
                 print("Failed to start graph request:", err!)
@@ -95,9 +102,17 @@ class FirstViewController: UIViewController, UIViewControllerTransitioningDelega
     }
     
     
+    
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("logged Out")
     }
+    
+    
+    
+    
+    
+    
+    
     //여기까지 FBlogin
     
     

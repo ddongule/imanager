@@ -24,8 +24,6 @@
 		E6A6B8232076139700F7F17E /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A6B8222076139700F7F17E /* SignupViewController.swift */; };
 		E6A6B8282076781400F7F17E /* popSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A6B8272076781400F7F17E /* popSignInViewController.swift */; };
 		E6B0CB312081D62A00BA85CE /* ManagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0CB302081D62A00BA85CE /* ManagingViewController.swift */; };
-		E6F155FD20867873007F6E8C /* homeTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F155FC20867873007F6E8C /* homeTabBar.storyboard */; };
-		E6F155FE208678DB007F6E8C /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F155FB208676C7007F6E8C /* TabBar.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,8 +49,6 @@
 		E6A6B8262076741800F7F17E /* imanager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = imanager.entitlements; sourceTree = "<group>"; };
 		E6A6B8272076781400F7F17E /* popSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popSignInViewController.swift; sourceTree = "<group>"; };
 		E6B0CB302081D62A00BA85CE /* ManagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagingViewController.swift; sourceTree = "<group>"; };
-		E6F155FB208676C7007F6E8C /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = TabBar.storyboard; path = /Users/minkyung/Desktop/imanager_/imanager/TabBar.storyboard; sourceTree = "<absolute>"; };
-		E6F155FC20867873007F6E8C /* homeTabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = homeTabBar.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +109,6 @@
 				E6A6B8102075EA3400F7F17E /* ViewController.swift */,
 				E6A6B8272076781400F7F17E /* popSignInViewController.swift */,
 				E6A6B8222076139700F7F17E /* SignupViewController.swift */,
-				E6F155FB208676C7007F6E8C /* TabBar.storyboard */,
-				E6F155FC20867873007F6E8C /* homeTabBar.storyboard */,
 				E6A6B8122075EA3400F7F17E /* Main.storyboard */,
 				E6B0CB302081D62A00BA85CE /* ManagingViewController.swift */,
 				E60432062085F12F00963C01 /* HomeViewController.swift */,
@@ -198,8 +192,6 @@
 				E6A6B8192075EA3400F7F17E /* LaunchScreen.storyboard in Resources */,
 				E6A6B8212075EFA100F7F17E /* GoogleService-Info.plist in Resources */,
 				E6A6B8162075EA3400F7F17E /* Assets.xcassets in Resources */,
-				E6F155FD20867873007F6E8C /* homeTabBar.storyboard in Resources */,
-				E6F155FE208678DB007F6E8C /* TabBar.storyboard in Resources */,
 				E6A6B8142075EA3400F7F17E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
