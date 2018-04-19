@@ -16,7 +16,9 @@ class departmentSearchViewController: UIViewController,UITableViewDataSource, UI
     
     var originalDepartmentList:[String] = Array()
     
-    var departments:[String] = ["통계학과"]
+    var departments:[String] = ["총 학생회","통계학과"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "학과 찾기"

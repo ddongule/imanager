@@ -14,6 +14,8 @@
 		E60432072085F12F00963C01 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60432062085F12F00963C01 /* HomeViewController.swift */; };
 		E614B52F2088C1BB007701E3 /* departmentSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E614B52E2088C1BB007701E3 /* departmentSearchViewController.swift */; };
 		E614B5312088C4D0007701E3 /* depSearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E614B5302088C4CF007701E3 /* depSearchDetailViewController.swift */; };
+		E614B5352088CDAE007701E3 /* clubSearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E614B5342088CDAE007701E3 /* clubSearchDetailViewController.swift */; };
+		E614B5372088CDBB007701E3 /* clubSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E614B5362088CDBB007701E3 /* clubSearchViewController.swift */; };
 		E65A2924207F4E5800BB369D /* CollegeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A2923207F4E5800BB369D /* CollegeSearchViewController.swift */; };
 		E65A2926207F56F500BB369D /* CollegeSearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A2925207F56F500BB369D /* CollegeSearchDetailViewController.swift */; };
 		E694F65F207786DF00FF168B /* UIButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E694F65E207786DF00FF168B /* UIButtonClass.swift */; };
@@ -38,6 +40,8 @@
 		E60432062085F12F00963C01 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E614B52E2088C1BB007701E3 /* departmentSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = departmentSearchViewController.swift; sourceTree = "<group>"; };
 		E614B5302088C4CF007701E3 /* depSearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = depSearchDetailViewController.swift; sourceTree = "<group>"; };
+		E614B5342088CDAE007701E3 /* clubSearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clubSearchDetailViewController.swift; sourceTree = "<group>"; };
+		E614B5362088CDBB007701E3 /* clubSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clubSearchViewController.swift; sourceTree = "<group>"; };
 		E65A2923207F4E5800BB369D /* CollegeSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeSearchViewController.swift; sourceTree = "<group>"; };
 		E65A2925207F56F500BB369D /* CollegeSearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeSearchDetailViewController.swift; sourceTree = "<group>"; };
 		E694F65E207786DF00FF168B /* UIButtonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonClass.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				E65A2925207F56F500BB369D /* CollegeSearchDetailViewController.swift */,
 				E614B52E2088C1BB007701E3 /* departmentSearchViewController.swift */,
 				E614B5302088C4CF007701E3 /* depSearchDetailViewController.swift */,
+				E614B5362088CDBB007701E3 /* clubSearchViewController.swift */,
+				E614B5342088CDAE007701E3 /* clubSearchDetailViewController.swift */,
 				E6A6B8152075EA3400F7F17E /* Assets.xcassets */,
 				E6A6B8172075EA3400F7F17E /* LaunchScreen.storyboard */,
 				E6A6B81A2075EA3400F7F17E /* Info.plist */,
@@ -276,6 +282,7 @@
 				E6B0CB312081D62A00BA85CE /* ManagingViewController.swift in Sources */,
 				E6A6B8232076139700F7F17E /* SignupViewController.swift in Sources */,
 				E6A6B8112075EA3400F7F17E /* ViewController.swift in Sources */,
+				E614B5372088CDBB007701E3 /* clubSearchViewController.swift in Sources */,
 				E6A6B8282076781400F7F17E /* popSignInViewController.swift in Sources */,
 				E614B52F2088C1BB007701E3 /* departmentSearchViewController.swift in Sources */,
 				E694F65F207786DF00FF168B /* UIButtonClass.swift in Sources */,
@@ -284,6 +291,7 @@
 				E6A6B80F2075EA3400F7F17E /* AppDelegate.swift in Sources */,
 				E60432012082118200963C01 /* addCashViewController.swift in Sources */,
 				E60432032083321300963C01 /* FirstViewController.swift in Sources */,
+				E614B5352088CDAE007701E3 /* clubSearchDetailViewController.swift in Sources */,
 				E60432072085F12F00963C01 /* HomeViewController.swift in Sources */,
 				E614B5312088C4D0007701E3 /* depSearchDetailViewController.swift in Sources */,
 			);

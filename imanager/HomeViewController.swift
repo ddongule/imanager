@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseAuth
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class HomeViewController: UIViewController {
 
@@ -21,10 +23,11 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func signOutButtonTapped(_ sender: Any) {
-    
     }
+
     
     @IBAction func managingButtonTapped(_ sender: Any) {
+        
     }
     
 //    override func viewDidAppear(_ animated: Bool) {
