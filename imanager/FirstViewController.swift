@@ -35,7 +35,7 @@ class FirstViewController: UIViewController, UIViewControllerTransitioningDelega
 //        loginButton.delegate = self as FBSDKLoginButtonDelegate
 //
         
-// default FB login
+        // default FB login
 //    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
 //        if error != nil {
 //            print(error)

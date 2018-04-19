@@ -1,25 +1,21 @@
 //
-//  CollegeSearchDetailViewController.swift
+//  depSearchDetailViewController.swift
 //  imanager
 //
-//  Created by minkyung on 2018. 4. 12..
+//  Created by minkyung on 2018. 4. 19..
 //  Copyright © 2018년 minkyung. All rights reserved.
 //
 
 import UIKit
 
-class CollegeSearchDetailViewController: UIViewController {
-    
-    @IBOutlet weak var departmentButton: UIRoundPrimaryButton!
-    @IBOutlet weak var clubButton: UIRoundPrimaryButton!
-    
-    @IBOutlet weak var lblDetail: UILabel!
-    var strCollegeName = ""
+class depSearchDetailViewController: UIViewController {
+  
+    var strDepartmentName = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        lblDetail.text = strCollegeName + "의 학생회 및 동아리"
     }
 
     override func didReceiveMemoryWarning() {
