@@ -15,6 +15,7 @@ class FirstViewController: UIViewController, UIViewControllerTransitioningDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         //style of the view
         loginView.layer.cornerRadius = 6
@@ -59,59 +60,59 @@ class FirstViewController: UIViewController, UIViewControllerTransitioningDelega
 //
         // Custom FB login button
         let customFBloginBtn = UIButton(type: .system)
-        customFBloginBtn.frame = CGRect(x: 25, y: 400, width: view.frame.width - 50, height: 40)
+        customFBloginBtn.frame = CGRect(x: 8, y: 10, width: view.frame.width - 50, height: 40)
         customFBloginBtn.setTitle("페이스북 로그인", for: .normal)
         customFBloginBtn.tintColor = UIColor.white
-        customFBloginBtn.backgroundColor = UIColor(red: 255/255, green: 199/255, blue: 0/255, alpha: 1)
-        customFBloginBtn.addTarget(self, action: #selector(handleCustomFBLogin), for: .touchUpInside)
+        customFBloginBtn.backgroundColor = UIColor(red: 56/255, green: 163/255, blue: 182/255, alpha: 1)
+        customFBloginBtn.addTarget(self, action: #selector(loginFaceBook(_:)), for: .touchUpInside)
         customFBloginBtn.titleLabel?.font = UIFont.init(name: "Apple SD Gothic Neo", size: 22)
-        view.addSubview(customFBloginBtn)
+        
+        loginView.addSubview(customFBloginBtn)
+//        UIView.transition(with: self.view, duration: 0.5, options: UIViewAnimationOptions.curveEaseIn, animations: {
+//            self.loginView.alpha = 1.0
+//        }, completion: nil)
+//
+        
+//        UIView.transition(with: self.view, duration: 0.5, options: UIViewAnimationOptions.curveEaseIn,
+//                          animations: {self.view.addSubview(loginView)}, completion: nil)
+        
         // Do any additional setup after loading the view.
     }
 
+    
+    // 내가 새로 쓴 거
+    @objc func loginFaceBook(_ sender: UIButton) {
+        let fbLoginManager = FBSDKLoginManager()
+        fbLoginManager.logIn(withReadPermissions:  ["public_profile","email"],from: self) {
+            (result, error) in
+            if (error == nil) {
+            let fbloginResult : FBSDKLoginManagerLoginResult = result!
+            if(fbloginResult.grantedPermissions.contains("email"))
+            {
+                self.getFBUserData()
+            }
+            }
+        }
+    }
+    
+    func getFBUserData() {
+        if ((FBSDKAccessToken.current()) != nil) {
+            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, email"]).start(completionHandler: { (connection, result, error) in
+                if (error == nil) {
+                    print(result)
+                    self.performSegue(withIdentifier: "signInFB", sender: self)
+                }
+            })
+        }}
+    // 여기까지 //
+    
     // viewdidload에 설정되어있는 것은 바깥에서 인식이 안되는건가? 궁금스
     let customFBloginBtn = UIButton(type: .system)
     
-    
-    
-    @objc func handleCustomFBLogin() {
-        FBSDKLoginManager().logIn(withReadPermissions: [
-//            "public_profile",
-                                                        "email"], from: self) { (result, err) in
-            if err != nil {
-                //에러 메시지 뜨게
-                print("Custom FB Login failed:", err!)
-                return
-            }
-            self.showEmailAddress()
-            self.performSegue(withIdentifier: "signIntoHomeVC", sender: nil)
-        }
-    }
-    
-    func showEmailAddress() {
-        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields":
-//            "public_profile,
-            "email"]).start {
-            (connection, result, err) in
-            if err != nil {
-                print("Failed to start graph request:", err!)
-                return
-            }
-            print(result!)
-        }
-    }
-    
-    
-    
+
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("logged Out")
     }
-    
-    
-    
-    
-    
-    
     
     //여기까지 FBlogin
     
@@ -125,13 +126,19 @@ class FirstViewController: UIViewController, UIViewControllerTransitioningDelega
     }
     
     @IBOutlet weak var loginAdminButton: UIRoundPrimaryButton!
+    
     @IBAction func loginAdminButtonPressed(_ sender: Any) {
         if (loginView.isHidden == true) {
+            
+            // 애니메이션을 넣고 싶었지만 넣지 못함 ㅠㅡㅠ
             loginView.isHidden = false
+         
         } else {
             loginView.isHidden = true
         }
     }
+    
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.loginView.isHidden = true

@@ -187,7 +187,7 @@
         <!--Home View Controller-->
         <scene sceneID="Opv-1z-7Dq">
             <objects>
-                <viewController storyboardIdentifier="signIn" id="kw5-RE-Tec" customClass="HomeViewController" customModule="imanager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="kw5-RE-Tec" customClass="HomeViewController" customModule="imanager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Z9-hN-uL1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -572,7 +572,7 @@
                                     <constraint firstAttribute="height" constant="38" id="3tj-kQ-ROy"/>
                                     <constraint firstAttribute="width" constant="178" id="V67-tp-RHr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                 <state key="normal" title="관리자 로그인">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -587,7 +587,7 @@
                                     <constraint firstAttribute="width" constant="178" id="Hrg-NL-oxO"/>
                                     <constraint firstAttribute="height" constant="36" id="SdZ-kP-jwi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <state key="normal" title="방문자 로그인">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -599,13 +599,13 @@
                                 <rect key="frame" x="16" y="332" width="343" height="315"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3w-Vw-uhR">
-                                        <rect key="frame" x="8" y="213" width="327" height="39"/>
+                                        <rect key="frame" x="8" y="235" width="327" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="39" id="OX1-GF-2qu"/>
-                                            <constraint firstAttribute="width" constant="327" id="sA5-xF-4Od"/>
+                                            <constraint firstAttribute="width" constant="327" id="Xue-2o-heG"/>
+                                            <constraint firstAttribute="height" constant="40" id="frQ-iT-vih"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="22"/>
-                                        <state key="normal" title="이메일로 로그인 하기">
+                                        <state key="normal" title="이메일 로그인">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -613,10 +613,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKR-bK-JXn">
-                                        <rect key="frame" x="8" y="144" width="327" height="39"/>
+                                        <rect key="frame" x="8" y="166" width="327" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="39" id="5xS-ys-2zE"/>
-                                            <constraint firstAttribute="width" constant="327" id="O2M-cI-6bS"/>
+                                            <constraint firstAttribute="height" constant="40" id="Qkc-fb-Ilr"/>
+                                            <constraint firstAttribute="width" constant="327" id="tJ2-bm-l5v"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="22"/>
                                         <state key="normal" title="카카오톡으로 로그인 하기">
@@ -626,12 +626,12 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.21872287330000001" green="0.64051649310000003" blue="0.7138671875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="n3w-Vw-uhR" firstAttribute="top" secondItem="LKR-bK-JXn" secondAttribute="bottom" constant="30" id="4Ed-el-Qs7"/>
-                                    <constraint firstItem="n3w-Vw-uhR" firstAttribute="leading" secondItem="vta-2y-Zt7" secondAttribute="leading" constant="8" id="8OW-it-eaY"/>
-                                    <constraint firstAttribute="bottom" secondItem="n3w-Vw-uhR" secondAttribute="bottom" constant="63" id="ZQc-aU-wEK"/>
-                                    <constraint firstItem="LKR-bK-JXn" firstAttribute="leading" secondItem="vta-2y-Zt7" secondAttribute="leading" constant="8" id="on8-WF-VY7"/>
-                                    <constraint firstAttribute="trailing" secondItem="n3w-Vw-uhR" secondAttribute="trailing" constant="8" id="onD-iR-bRR"/>
-                                    <constraint firstAttribute="trailing" secondItem="LKR-bK-JXn" secondAttribute="trailing" constant="8" id="rav-ND-y2h"/>
+                                    <constraint firstAttribute="trailing" secondItem="n3w-Vw-uhR" secondAttribute="trailing" constant="8" id="24W-th-PCw"/>
+                                    <constraint firstItem="n3w-Vw-uhR" firstAttribute="top" secondItem="LKR-bK-JXn" secondAttribute="bottom" constant="29" id="6m9-6M-jaw"/>
+                                    <constraint firstItem="n3w-Vw-uhR" firstAttribute="leading" secondItem="vta-2y-Zt7" secondAttribute="leading" constant="8" id="WRa-Ve-LOi"/>
+                                    <constraint firstAttribute="bottom" secondItem="n3w-Vw-uhR" secondAttribute="bottom" constant="40" id="inU-Ak-lEd"/>
+                                    <constraint firstAttribute="trailing" secondItem="LKR-bK-JXn" secondAttribute="trailing" constant="8" id="mef-1F-FMJ"/>
+                                    <constraint firstItem="LKR-bK-JXn" firstAttribute="leading" secondItem="vta-2y-Zt7" secondAttribute="leading" constant="8" id="xOx-st-rBq"/>
                                     <constraint firstAttribute="width" constant="343" id="xcm-SZ-sjW"/>
                                 </constraints>
                             </view>
@@ -654,7 +654,7 @@
                     <connections>
                         <outlet property="loginAdminButton" destination="FRk-WQ-Mdp" id="XOZ-tK-nPd"/>
                         <outlet property="loginView" destination="vta-2y-Zt7" id="eqj-X5-oV1"/>
-                        <segue destination="kw5-RE-Tec" kind="presentation" id="uXK-rA-Y9V"/>
+                        <segue destination="kw5-RE-Tec" kind="presentation" identifier="signInFB" id="ecZ-q3-bmo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3d3-4F-wee" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -828,6 +828,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uXK-rA-Y9V"/>
+        <segue reference="ecZ-q3-bmo"/>
     </inferredMetricsTieBreakers>
 </document>
