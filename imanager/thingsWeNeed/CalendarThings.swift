@@ -13,3 +13,8 @@ let calendar = Calendar.current
 
 var month = calendar.component(.month, from: date) - 1
 var year = calendar.component(.year, from: date)
+
+struct Univ {
+    let univ_name : String
+    let major : String
+}

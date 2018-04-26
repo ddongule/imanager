@@ -18,10 +18,13 @@ class departmentSearchViewController: UIViewController,UITableViewDataSource, UI
     
     var departments:[String] = ["총 학생회","통계학과"]
     
+    //학과 json 가져오기
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "학과 찾기"
+        
         // Do any additional setup after loading the view.
         for department in departments {
             originalDepartmentList.append(department)
@@ -31,6 +34,32 @@ class departmentSearchViewController: UIViewController,UITableViewDataSource, UI
         departmentList.dataSource = self
         departmentSearchBar.delegate = self
         departmentSearchBar.addTarget(self, action: #selector(searchRecords(_ :)), for: .editingChanged)
+        
+        
+        // 학과 json local file(univ_major.json)에서 가져오기
+        
+        let path = Bundle.main.path(forResource: "univ_major", ofType: "json")
+        let url = URL(fileURLWithPath: path!)
+        
+        do {
+            let data = try! Data(contentsOf: url)
+            let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+//            print(json)
+
+            guard let array = json as? [Any] else { return }
+            
+            for univ in array {
+                guard let univDict = univ as? [String: Any] else { return }
+                guard let univName = univDict["univ_name"] as? String else { print("not a String"); return }
+                guard let univCampus = univDict["campus"] as? String else { return }
+                guard let univMajor = univDict["major"] as? String else { return }
+                print(univName)
+                print(univMajor)
+                print(" ")
+            }
+        } catch {
+            print(error)
+        }
         
     }
     
@@ -64,9 +93,25 @@ class departmentSearchViewController: UIViewController,UITableViewDataSource, UI
     //UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return departments.count
         return departments.count
     }
     
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        var cell = tableView.dequeueReusableCell(withIdentifier: "department")
+//        if cell == nil {
+//            cell = UITableViewCell(style: .default, reuseIdentifier: "department")
+//        }
+//        cell?.textLabel?.text = departments[indexPath.row]
+//        return cell!
+////    }
+//    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+//        cell.textLabel?.text = univMajors[indexPath.row].univ_name.capitalized
+//        return cell
+//    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "department")
         if cell == nil {
@@ -75,6 +120,9 @@ class departmentSearchViewController: UIViewController,UITableViewDataSource, UI
         cell?.textLabel?.text = departments[indexPath.row]
         return cell!
     }
+    
+    
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

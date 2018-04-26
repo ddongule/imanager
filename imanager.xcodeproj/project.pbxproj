@@ -16,6 +16,7 @@
 		E614B5312088C4D0007701E3 /* depSearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E614B5302088C4CF007701E3 /* depSearchDetailViewController.swift */; };
 		E614B5352088CDAE007701E3 /* clubSearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E614B5342088CDAE007701E3 /* clubSearchDetailViewController.swift */; };
 		E614B5372088CDBB007701E3 /* clubSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E614B5362088CDBB007701E3 /* clubSearchViewController.swift */; };
+		E614B539208B2702007701E3 /* univ_major.json in Resources */ = {isa = PBXBuildFile; fileRef = E614B538208B2701007701E3 /* univ_major.json */; };
 		E65A2924207F4E5800BB369D /* CollegeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A2923207F4E5800BB369D /* CollegeSearchViewController.swift */; };
 		E65A2926207F56F500BB369D /* CollegeSearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A2925207F56F500BB369D /* CollegeSearchDetailViewController.swift */; };
 		E694F65F207786DF00FF168B /* UIButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E694F65E207786DF00FF168B /* UIButtonClass.swift */; };
@@ -42,6 +43,7 @@
 		E614B5302088C4CF007701E3 /* depSearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = depSearchDetailViewController.swift; sourceTree = "<group>"; };
 		E614B5342088CDAE007701E3 /* clubSearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clubSearchDetailViewController.swift; sourceTree = "<group>"; };
 		E614B5362088CDBB007701E3 /* clubSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clubSearchViewController.swift; sourceTree = "<group>"; };
+		E614B538208B2701007701E3 /* univ_major.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = univ_major.json; sourceTree = "<group>"; };
 		E65A2923207F4E5800BB369D /* CollegeSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeSearchViewController.swift; sourceTree = "<group>"; };
 		E65A2925207F56F500BB369D /* CollegeSearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeSearchDetailViewController.swift; sourceTree = "<group>"; };
 		E694F65E207786DF00FF168B /* UIButtonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonClass.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		E6A6B80D2075EA3300F7F17E /* imanager */ = {
 			isa = PBXGroup;
 			children = (
+				E614B538208B2701007701E3 /* univ_major.json */,
 				E614B52D2088C15A007701E3 /* thingsWeNeed */,
 				E6A6B8262076741800F7F17E /* imanager.entitlements */,
 				E6A6B80E2075EA3400F7F17E /* AppDelegate.swift */,
@@ -212,6 +215,7 @@
 				E6A6B8192075EA3400F7F17E /* LaunchScreen.storyboard in Resources */,
 				E6A6B8212075EFA100F7F17E /* GoogleService-Info.plist in Resources */,
 				E6A6B8162075EA3400F7F17E /* Assets.xcassets in Resources */,
+				E614B539208B2702007701E3 /* univ_major.json in Resources */,
 				E6A6B8142075EA3400F7F17E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

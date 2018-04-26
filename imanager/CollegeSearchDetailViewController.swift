@@ -9,11 +9,13 @@
 import UIKit
 
 class CollegeSearchDetailViewController: UIViewController {
+    //왜 적용이 안될까?
     @IBOutlet weak var departmentButton: UIRoundPrimaryButton!
     @IBOutlet weak var clubButton: UIRoundPrimaryButton!
     
     @IBOutlet weak var lblDetail: UILabel!
     var strCollegeName = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

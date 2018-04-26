@@ -46,6 +46,7 @@ class ManagingViewController: UIViewController, FloatyDelegate {
             Calendar.autoupdatingCurrent
         }
     }
+    
     var currentMonth = String()
     let Months = ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"]
     
@@ -95,10 +96,12 @@ class ManagingViewController: UIViewController, FloatyDelegate {
             self.navigationController?.pushViewController(cash, animated: true)
         }
         
-        
         fab.paddingY = 55
         fab.fabDelegate = self
         self.view.addSubview(fab)
+        
+        
+        
     }
     
     
