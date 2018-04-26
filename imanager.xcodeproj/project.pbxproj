@@ -44,6 +44,7 @@
 		E614B5342088CDAE007701E3 /* clubSearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clubSearchDetailViewController.swift; sourceTree = "<group>"; };
 		E614B5362088CDBB007701E3 /* clubSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clubSearchViewController.swift; sourceTree = "<group>"; };
 		E614B538208B2701007701E3 /* univ_major.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = univ_major.json; sourceTree = "<group>"; };
+		E65A13392091C27E00F52385 /* Mlist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Mlist.storyboard; path = /Users/minkyung/Desktop/imanager_/imanager/imanager/Mlist.storyboard; sourceTree = "<absolute>"; };
 		E65A2923207F4E5800BB369D /* CollegeSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeSearchViewController.swift; sourceTree = "<group>"; };
 		E65A2925207F56F500BB369D /* CollegeSearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeSearchDetailViewController.swift; sourceTree = "<group>"; };
 		E694F65E207786DF00FF168B /* UIButtonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonClass.swift; sourceTree = "<group>"; };
@@ -129,6 +130,7 @@
 				E6A6B8272076781400F7F17E /* popSignInViewController.swift */,
 				E6A6B8222076139700F7F17E /* SignupViewController.swift */,
 				E6A6B8122075EA3400F7F17E /* Main.storyboard */,
+				E65A13392091C27E00F52385 /* Mlist.storyboard */,
 				E6B0CB302081D62A00BA85CE /* ManagingViewController.swift */,
 				E60432062085F12F00963C01 /* HomeViewController.swift */,
 				E60432002082118200963C01 /* addCashViewController.swift */,

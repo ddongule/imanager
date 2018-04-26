@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/minkyung/Desktop/imanager_/imanager/imanager/Mlist.storyboard">
+   </FileRef>
+   <FileRef
       location = "group:imanager.xcodeproj">
    </FileRef>
    <FileRef
