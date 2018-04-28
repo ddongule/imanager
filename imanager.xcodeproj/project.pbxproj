@@ -17,6 +17,9 @@
 		E614B5352088CDAE007701E3 /* clubSearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E614B5342088CDAE007701E3 /* clubSearchDetailViewController.swift */; };
 		E614B5372088CDBB007701E3 /* clubSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E614B5362088CDBB007701E3 /* clubSearchViewController.swift */; };
 		E614B539208B2702007701E3 /* univ_major.json in Resources */ = {isa = PBXBuildFile; fileRef = E614B538208B2701007701E3 /* univ_major.json */; };
+		E65A133A209463B800F52385 /* Mlist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E65A13392091C27E00F52385 /* Mlist.storyboard */; };
+		E65A133D2094728200F52385 /* TabCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A133C2094728200F52385 /* TabCalendarViewController.swift */; };
+		E65A133F209473C900F52385 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A133E209473C900F52385 /* DateCollectionViewCell.swift */; };
 		E65A2924207F4E5800BB369D /* CollegeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A2923207F4E5800BB369D /* CollegeSearchViewController.swift */; };
 		E65A2926207F56F500BB369D /* CollegeSearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65A2925207F56F500BB369D /* CollegeSearchDetailViewController.swift */; };
 		E694F65F207786DF00FF168B /* UIButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E694F65E207786DF00FF168B /* UIButtonClass.swift */; };
@@ -45,6 +48,8 @@
 		E614B5362088CDBB007701E3 /* clubSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clubSearchViewController.swift; sourceTree = "<group>"; };
 		E614B538208B2701007701E3 /* univ_major.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = univ_major.json; sourceTree = "<group>"; };
 		E65A13392091C27E00F52385 /* Mlist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Mlist.storyboard; path = /Users/minkyung/Desktop/imanager_/imanager/imanager/Mlist.storyboard; sourceTree = "<absolute>"; };
+		E65A133C2094728200F52385 /* TabCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCalendarViewController.swift; sourceTree = "<group>"; };
+		E65A133E209473C900F52385 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
 		E65A2923207F4E5800BB369D /* CollegeSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeSearchViewController.swift; sourceTree = "<group>"; };
 		E65A2925207F56F500BB369D /* CollegeSearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeSearchDetailViewController.swift; sourceTree = "<group>"; };
 		E694F65E207786DF00FF168B /* UIButtonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonClass.swift; sourceTree = "<group>"; };
@@ -100,6 +105,15 @@
 			path = thingsWeNeed;
 			sourceTree = "<group>";
 		};
+		E65A13402094CF3F00F52385 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				E65A133E209473C900F52385 /* DateCollectionViewCell.swift */,
+				E65A133C2094728200F52385 /* TabCalendarViewController.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 		E6A6B8022075EA3300F7F17E = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +154,7 @@
 				E614B5302088C4CF007701E3 /* depSearchDetailViewController.swift */,
 				E614B5362088CDBB007701E3 /* clubSearchViewController.swift */,
 				E614B5342088CDAE007701E3 /* clubSearchDetailViewController.swift */,
+				E65A13402094CF3F00F52385 /* Calendar */,
 				E6A6B8152075EA3400F7F17E /* Assets.xcassets */,
 				E6A6B8172075EA3400F7F17E /* LaunchScreen.storyboard */,
 				E6A6B81A2075EA3400F7F17E /* Info.plist */,
@@ -214,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E65A133A209463B800F52385 /* Mlist.storyboard in Resources */,
 				E6A6B8192075EA3400F7F17E /* LaunchScreen.storyboard in Resources */,
 				E6A6B8212075EFA100F7F17E /* GoogleService-Info.plist in Resources */,
 				E6A6B8162075EA3400F7F17E /* Assets.xcassets in Resources */,
@@ -295,10 +311,12 @@
 				E65A2924207F4E5800BB369D /* CollegeSearchViewController.swift in Sources */,
 				E65A2926207F56F500BB369D /* CollegeSearchDetailViewController.swift in Sources */,
 				E6A6B80F2075EA3400F7F17E /* AppDelegate.swift in Sources */,
+				E65A133D2094728200F52385 /* TabCalendarViewController.swift in Sources */,
 				E60432012082118200963C01 /* addCashViewController.swift in Sources */,
 				E60432032083321300963C01 /* FirstViewController.swift in Sources */,
 				E614B5352088CDAE007701E3 /* clubSearchDetailViewController.swift in Sources */,
 				E60432072085F12F00963C01 /* HomeViewController.swift in Sources */,
+				E65A133F209473C900F52385 /* DateCollectionViewCell.swift in Sources */,
 				E614B5312088C4D0007701E3 /* depSearchDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
