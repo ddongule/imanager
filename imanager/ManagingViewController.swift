@@ -12,6 +12,9 @@ import Floaty
 
 class ManagingViewController: UIViewController, FloatyDelegate {
 
+    var currentMonth = String()
+    let Months = ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"]
+    
     @IBOutlet weak var MonthLabel: UILabel!
     @IBAction func Next(_ sender: Any) {
         switch currentMonth {
@@ -27,7 +30,7 @@ class ManagingViewController: UIViewController, FloatyDelegate {
             currentMonth = Months[month]
             MonthLabel.text = "\(currentMonth) \(year)"
             Calendar.autoupdatingCurrent
-            //Calendar.reloadData()
+//            Calendar.reloadData()
         }
     }
     @IBAction func Back(_ sender: Any) {
@@ -46,9 +49,6 @@ class ManagingViewController: UIViewController, FloatyDelegate {
             Calendar.autoupdatingCurrent
         }
     }
-    
-    var currentMonth = String()
-    let Months = ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"]
     
     
     override func viewDidLoad() {
@@ -103,17 +103,6 @@ class ManagingViewController: UIViewController, FloatyDelegate {
         
         
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
