@@ -12,7 +12,6 @@ import FBSDKLoginKit
 
 class FirstViewController: UIViewController, UIViewControllerTransitioningDelegate {
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,10 +58,10 @@ class FirstViewController: UIViewController, UIViewControllerTransitioningDelega
 //
         // Custom FB login button
         let customFBloginBtn = UIButton(type: .system)
-        customFBloginBtn.frame = CGRect(x: 8, y: 10, width: view.frame.width - 50, height: 40)
+        customFBloginBtn.frame = CGRect(x: 8, y: 15, width: view.frame.width - 50, height: 40)
         customFBloginBtn.setTitle("페이스북 로그인", for: .normal)
-        customFBloginBtn.tintColor = UIColor.white
-        customFBloginBtn.backgroundColor = UIColor(red: 56/255, green: 163/255, blue: 182/255, alpha: 1)
+        customFBloginBtn.tintColor = UIColor(red: 255/255, green: 199/255, blue: 0/255, alpha: 1)
+        customFBloginBtn.backgroundColor = UIColor.white
         customFBloginBtn.addTarget(self, action: #selector(loginFaceBook(_:)), for: .touchUpInside)
         customFBloginBtn.titleLabel?.font = UIFont.init(name: "Apple SD Gothic Neo", size: 22)
         
