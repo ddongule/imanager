@@ -9,9 +9,12 @@
 import UIKit
 import FirebaseAuth
 import MessageUI
-
+import FirebaseDatabase
 
 class SignupViewController: UIViewController, UITextFieldDelegate, MFMailComposeViewControllerDelegate {
+    
+//    var ref: DatabaseReference!
+    var ref = Database.database().reference()
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -49,7 +52,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate, MFMailCompose
                             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default ) { action in
                                 self.dismiss(animated: true, completion: nil)}
                             
-                            // ok 말고 cancel도 하려면 이렇게 하면 된다. 근데 cancel 해도 회원가입 됨 ㅋ
+                            // ok 말고 cancel도 하려면 이렇게 하면 된다. 근데 cancel 해도 회원가입 됨 ㅋ 이걸 해결할 수 잇으면 좋으련만
                             //   let cancel = UIAlertAction(title: "cancel", style: UIAlertActionStyle.cancel, handler: nil)
                             //   myAlert.addAction(cancel)
                             

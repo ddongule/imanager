@@ -96,7 +96,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQh-nz-w2Z">
-                                <rect key="frame" x="16" y="165" width="343" height="30"/>
+                                <rect key="frame" x="16" y="136" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Er8-Mq-XFo"/>
                                     <constraint firstAttribute="width" constant="343" id="Z4c-Xe-j1a"/>
@@ -122,7 +122,7 @@
                                 <rect key="frame" x="16" y="257" width="343" height="38"/>
                                 <color key="backgroundColor" red="1" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="bVC-cT-nJD"/>
+                                    <constraint firstAttribute="height" constant="38" id="M0Z-De-z7X"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <state key="normal" title="imanager 로그인">
@@ -133,7 +133,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I8o-8E-LnE">
-                                <rect key="frame" x="16" y="211" width="343" height="30"/>
+                                <rect key="frame" x="16" y="182" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="YfF-cR-TAW"/>
                                     <constraint firstAttribute="height" constant="30" id="rIn-4A-sW8"/>
@@ -143,10 +143,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iManager" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubZ-TV-ch2">
-                                <rect key="frame" x="16" y="49" width="343" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="2aM-k0-i1v"/>
-                                </constraints>
+                                <rect key="frame" x="16" y="49" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -154,22 +151,22 @@
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hUd-eB-26b" firstAttribute="leading" secondItem="I8o-8E-LnE" secondAttribute="leading" id="71O-ea-opt"/>
-                            <constraint firstItem="TQh-nz-w2Z" firstAttribute="top" secondItem="ubZ-TV-ch2" secondAttribute="bottom" constant="66" id="CIl-Fa-57m"/>
+                            <constraint firstItem="hUd-eB-26b" firstAttribute="top" secondItem="I8o-8E-LnE" secondAttribute="bottom" constant="45" id="Bvb-Ib-0Rz"/>
+                            <constraint firstItem="hUd-eB-26b" firstAttribute="trailing" secondItem="ZJS-rh-7Ju" secondAttribute="trailing" id="Dde-qb-Od3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I8o-8E-LnE" secondAttribute="trailing" constant="16" id="OZB-fg-JID"/>
-                            <constraint firstItem="hUd-eB-26b" firstAttribute="leading" secondItem="ZJS-rh-7Ju" secondAttribute="leading" id="Oy2-0R-S9a"/>
                             <constraint firstItem="I8o-8E-LnE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="QDi-Q1-UaS"/>
-                            <constraint firstItem="hUd-eB-26b" firstAttribute="top" secondItem="I8o-8E-LnE" secondAttribute="bottom" constant="16" id="U2n-3o-FLP"/>
+                            <constraint firstItem="hUd-eB-26b" firstAttribute="leading" secondItem="I8o-8E-LnE" secondAttribute="leading" id="Ug8-gv-dGI"/>
                             <constraint firstAttribute="bottom" secondItem="ZJS-rh-7Ju" secondAttribute="bottom" constant="20" symbolic="YES" id="Zg9-X8-KI7"/>
                             <constraint firstItem="I8o-8E-LnE" firstAttribute="top" secondItem="TQh-nz-w2Z" secondAttribute="bottom" constant="16" id="ZjE-Ke-XzF"/>
+                            <constraint firstItem="hUd-eB-26b" firstAttribute="trailing" secondItem="I8o-8E-LnE" secondAttribute="trailing" id="aDZ-CM-c0g"/>
+                            <constraint firstItem="ubZ-TV-ch2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="aNd-S2-TD3"/>
                             <constraint firstItem="TQh-nz-w2Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bje-Cc-ase"/>
-                            <constraint firstItem="ubZ-TV-ch2" firstAttribute="trailing" secondItem="TQh-nz-w2Z" secondAttribute="trailing" id="dIH-s2-zAz"/>
-                            <constraint firstItem="hUd-eB-26b" firstAttribute="trailing" secondItem="ZJS-rh-7Ju" secondAttribute="trailing" id="gAv-eM-cSZ"/>
+                            <constraint firstItem="hUd-eB-26b" firstAttribute="leading" secondItem="ZJS-rh-7Ju" secondAttribute="leading" id="jFw-h9-ri2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TQh-nz-w2Z" secondAttribute="trailing" constant="16" id="lBV-Jj-7Yp"/>
+                            <constraint firstItem="ubZ-TV-ch2" firstAttribute="leading" secondItem="TQh-nz-w2Z" secondAttribute="leading" id="lnH-ps-bcX"/>
                             <constraint firstItem="I8o-8E-LnE" firstAttribute="top" secondItem="TQh-nz-w2Z" secondAttribute="bottom" constant="16" id="nSU-wU-gTr"/>
-                            <constraint firstItem="ubZ-TV-ch2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="vAd-zV-Tl4"/>
-                            <constraint firstItem="ubZ-TV-ch2" firstAttribute="leading" secondItem="TQh-nz-w2Z" secondAttribute="leading" id="vHg-3b-dOv"/>
-                            <constraint firstItem="hUd-eB-26b" firstAttribute="trailing" secondItem="I8o-8E-LnE" secondAttribute="trailing" id="wft-uI-I5D"/>
+                            <constraint firstItem="TQh-nz-w2Z" firstAttribute="top" secondItem="ubZ-TV-ch2" secondAttribute="bottom" constant="66" id="sit-ns-eIM"/>
+                            <constraint firstItem="ubZ-TV-ch2" firstAttribute="trailing" secondItem="TQh-nz-w2Z" secondAttribute="trailing" id="thi-Fg-m8u"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -757,14 +754,14 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1m-Fc-FN3" customClass="UIRoundPrimaryButton" customModule="imanager" customModuleProvider="target">
                                 <rect key="frame" x="98" y="288" width="178" height="36"/>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.77647058820000003" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="178" id="Hrg-NL-oxO"/>
                                     <constraint firstAttribute="height" constant="36" id="SdZ-kP-jwi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <state key="normal" title="방문자 로그인">
-                                    <color key="titleColor" red="0.99607843139999996" green="0.77647058820000003" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="ek9-ln-3eJ" kind="show" id="382-fi-qpG"/>
@@ -777,7 +774,7 @@
                                         <rect key="frame" x="8" y="69" width="327" height="120"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="22"/>
                                         <state key="normal" title="카카오톡으로 로그인 하기">
-                                            <color key="titleColor" red="1" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3w-Vw-uhR">
@@ -788,14 +785,14 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="22"/>
                                         <state key="normal" title="이메일 로그인">
-                                            <color key="titleColor" red="1" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <segue destination="BYZ-38-t0r" kind="show" identifier="signIntoHomeVC" id="LgW-oy-HeX"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.77647058820000003" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="n3w-Vw-uhR" firstAttribute="top" relation="lessThanOrEqual" secondItem="LKR-bK-JXn" secondAttribute="bottom" constant="15" id="024-dR-3P9"/>
                                     <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="n3w-Vw-uhR" secondAttribute="bottom" constant="15" id="6lv-IB-bOf"/>
@@ -808,7 +805,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRk-WQ-Mdp" customClass="UIRoundPrimaryButton" customModule="imanager" customModuleProvider="target">
                                 <rect key="frame" x="98" y="207" width="178" height="38"/>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="3tj-kQ-ROy"/>
                                     <constraint firstAttribute="width" constant="178" id="V67-tp-RHr"/>
@@ -816,14 +813,14 @@
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="관리자 로그인">
-                                    <color key="titleColor" red="0.99607843137254903" green="0.77647058823529413" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="loginAdminButtonPressed:" destination="Slg-ih-kCy" eventType="touchUpInside" id="yg0-lv-dbX"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="FRk-WQ-Mdp" firstAttribute="leading" secondItem="poh-rP-X8P" secondAttribute="leading" constant="98.5" id="Cnt-vd-bc8"/>
                             <constraint firstAttribute="bottom" secondItem="vta-2y-Zt7" secondAttribute="bottom" constant="20" symbolic="YES" id="LaK-5B-Saw"/>

@@ -58,10 +58,10 @@ class FirstViewController: UIViewController, UIViewControllerTransitioningDelega
 //
         // Custom FB login button
         let customFBloginBtn = UIButton(type: .system)
-        customFBloginBtn.frame = CGRect(x: 8, y: 15, width: view.frame.width - 50, height: 40)
+        customFBloginBtn.frame = CGRect(x: 8, y: 13, width: view.frame.width - 50, height: 40)
         customFBloginBtn.setTitle("페이스북 로그인", for: .normal)
-        customFBloginBtn.tintColor = UIColor(red: 255/255, green: 199/255, blue: 0/255, alpha: 1)
-        customFBloginBtn.backgroundColor = UIColor.white
+        customFBloginBtn.tintColor = UIColor.white
+        customFBloginBtn.backgroundColor = UIColor(red: 255/255, green: 199/255, blue: 0/255, alpha: 1)
         customFBloginBtn.addTarget(self, action: #selector(loginFaceBook(_:)), for: .touchUpInside)
         customFBloginBtn.titleLabel?.font = UIFont.init(name: "Apple SD Gothic Neo", size: 22)
         
