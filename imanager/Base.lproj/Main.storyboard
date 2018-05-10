@@ -490,6 +490,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="sendMail:" destination="Hfi-4b-b0X" eventType="touchUpInside" id="ehz-Te-0If"/>
                                     <action selector="sendMailWithSender:" destination="Hfi-4b-b0X" eventType="touchUpInside" id="it9-nY-ooa"/>
                                 </connections>
                             </button>
@@ -583,6 +584,7 @@
                         <outlet property="nameTextField" destination="bON-RG-AeD" id="M64-D1-Wob"/>
                         <outlet property="passwordConfirmTextField" destination="ioB-UL-cVh" id="ZDF-sD-ylz"/>
                         <outlet property="passwordTextField" destination="B22-ru-5Kc" id="7ZL-gJ-r0m"/>
+                        <outlet property="sendMailButton" destination="r6I-6A-GDC" id="NWM-iB-Xtg"/>
                         <outlet property="signUpButton" destination="wGV-xa-vG1" id="lLG-FR-e5b"/>
                     </connections>
                 </viewController>

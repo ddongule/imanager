@@ -13,7 +13,10 @@ import FirebaseDatabase
 
 class SignupViewController: UIViewController, UITextFieldDelegate, MFMailComposeViewControllerDelegate {
     
-//    var ref: DatabaseReference!
+    @IBOutlet weak var sendMailButton: UIButton!
+    @IBAction func sendMail(_ sender: Any) {
+    }
+    //    var ref: DatabaseReference!
     var ref = Database.database().reference()
     
     @IBOutlet weak var nameTextField: UITextField!
