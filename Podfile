@@ -8,9 +8,13 @@ target 'imanager' do
   # Pods for imanager
 	pod 'Firebase/Core'
 	pod 'Firebase/Auth'
- 	pod 'FBSDKLoginKit'
+	pod 'Firebase/Database'
+ 	pod 'Firebase/Core'
+
+	pod 'FBSDKLoginKit'
  	pod 'FBSDKCoreKit'
 	pod 'FBSDKShareKit'
+	
 	pod  "Floaty"," ~> 4.0.0"
 	pod 'Eureka'
 
