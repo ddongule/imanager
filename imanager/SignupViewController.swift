@@ -43,62 +43,35 @@ class SignupViewController: UIViewController, UITextFieldDelegate, MFMailCompose
         {
             displayAlert(title: "비밀번호를 확인해주세요.", message: "두 비밀번호가 다릅니다.")
         } else {
+            let customDomain = "cau"
+            let test = self.emailTextField.text
+            if self.isValidEmail(testEmail: test!, domain: customDomain) == true {
             if let email = emailTextField.text {
                 if let password = passwordTextField.text {
                     
                     // SIGN UP
-                    Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
+                    Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
                         if error != nil {
-                            let signuperrorAlert = UIAlertController(title: "Signup error", message: "\(error?.localizedDescription) Please try again later", preferredStyle: .alert)
-                            self.present(signuperrorAlert, animated: true, completion: nil)
+//                            let signuperrorAlert = UIAlertController(title: "Signup error", message: "\(error?.localizedDescription) Please try again later", preferredStyle: .alert)
+//                            self.present(signuperrorAlert, animated: true, completion: nil)
+                            self.displayAlert(title: "로그인 오류", message: "다시 시도해 보세요") //위에꺼 수정
                             return
                         }
-                        self.sendEmail()
-                        self.dismiss(animated: true, completion: nil)
-                    })
+                        
+                            self.sendEmail()
+                            self.dismiss(animated: true, completion: nil)
                     
-//                    Auth.auth().createUser(withEmail: email, password: password, completion: {(user, error) in
-//                        if user != nil
-//                        {
-//                           print("SUCCESS")
-//                        }
-//                        else
-//                        {
-//                            if let myError = error?.localizedDescription
-//                            {
-//                                print(myError)
-//                            }
-//                            else
-//                            {
-//                                print("ERROR")
-//                            }
-//                        }
-//                    })
-//                    Auth.auth().createUser(withEmail: email, password: password, completion: {(user, error) in
-//                        if error != nil {
-//                            self.displayAlert(title: "Error", message: error!.localizedDescription)
-//
-//                        } else {
-//                            let myAlert = UIAlertController(title: "회원가입 되었습니다.", message: "", preferredStyle: UIAlertControllerStyle.alert)
-//                            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default ) { action in
-//                                self.dismiss(animated: true, completion: nil)}
-//
-//                            // ok 말고 cancel도 하려면 이렇게 하면 된다. 근데 cancel 해도 회원가입 됨 ㅋ 이걸 해결할 수 잇으면 좋으련만
-//                            //   let cancel = UIAlertAction(title: "cancel", style: UIAlertActionStyle.cancel, handler: nil)
-//                            //   myAlert.addAction(cancel)
-//
-//                            myAlert.addAction(okAction)
-//                            self.present(myAlert, animated: true, completion: nil)
-//
-//                            // print("회원가입 되었습니다.")
-//                            // self.displayAlert(title: "회원가입 되었습니다.", message: "")
-//                            // print("회원가입 되었습니다.")
-//                        }
-//                    })
+                        //self.displayAlert(title: "축하합니다.", message: "회원가입 되었습니다")
+                    })
                 }}
+            } else {
+                self.displayAlert(title: "email 인증 오류", message: "대학교 이메일이 아닙니다. 학교 이메일로 다시 가입해주세요")
+                print("도메인이 ac.kr이 아닙니다. 대학교 이메일로 다시 가입해주세요")
+            }
         }
     }
     
+    //Alert 코드임
     func displayAlert(title:String, message:String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -130,6 +103,15 @@ class SignupViewController: UIViewController, UITextFieldDelegate, MFMailCompose
             })
         }
 
+    }
+    
+    //email이 학교 이메일인지 확인하는 코드(정규표현식 사용)
+    func isValidEmail(testEmail:String, domain:String) -> Bool {
+        
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[ac.kr]{2,}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        let result = emailTest.evaluate(with: testEmail)
+        return result
     }
     
     

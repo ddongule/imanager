@@ -39,7 +39,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
 //            print(user?.email) //이거 하면 user가 회원가입 햇는지 안햇는지 로그로 볼 수 있음
         }
 
-        // 정보를 제대로 입력하지 않았을 때 Alert
+        // 정보를 제대로 입력하지 않았을 때 Alert -> 5/12 장준혁 수정 밑에 else 코드 수정하면 됨
+        
 //        if emailTextField.text == "" || passwordTextField.text == "" {
 //            displayAlert(title: "정보를 기입해 주세요.", message: "이메일과 비밀번호를 모두 입력하셔야 합니다.")
 //        } else {
@@ -61,7 +62,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                             loginAlert.addAction(loginAction)
                             self.present(loginAlert, animated: true, completion: nil)
                         } else {
-                            self.displayAlert(title: "Error", message: error!.localizedDescription)
+                            self.displayAlert(title: "오류", message: "이메일과 비밀번호를 모두 입력하셔야 합니다.")
                         }
                     })
                 }}
