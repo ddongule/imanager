@@ -23,6 +23,19 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func signOutButtonTapped(_ sender: Any) {
+        //로그아웃 기능 일단 추가했는데 로그아웃 된지 어떻게 확인할까?
+        do {
+            try! Auth.auth().signOut()
+            
+            if Auth.auth().currentUser == nil {
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! FirstViewController
+                present(vc, animated: true, completion: nil)
+                print("작동?")
+            }
+        } catch let error as NSError {
+            displayAlert(title: "오류", message: error.localizedDescription)
+            
+        }
     }
 
     
@@ -30,6 +43,12 @@ class HomeViewController: UIViewController {
         
     }
     
+    //Alert 코드임
+    func displayAlert(title:String, message:String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
 //    override func viewDidAppear(_ animated: Bool) {
 //        let isUserLoggedIn =
 //        if(!isUserLoggedIn) {

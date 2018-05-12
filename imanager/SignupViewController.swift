@@ -43,8 +43,10 @@ class SignupViewController: UIViewController, UITextFieldDelegate, MFMailCompose
         {
             displayAlert(title: "비밀번호를 확인해주세요.", message: "두 비밀번호가 다릅니다.")
         } else {
-            let customDomain = "cau"
+           
+            let customDomain = "[A-Za-z0-9.-]"
             let test = self.emailTextField.text
+            
             if self.isValidEmail(testEmail: test!, domain: customDomain) == true {
             if let email = emailTextField.text {
                 if let password = passwordTextField.text {
