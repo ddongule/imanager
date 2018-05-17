@@ -17,19 +17,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var loginButton: UIButton!
     
-    
-    
-    
-    func displayAlert(title:String, message:String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
     @IBAction func loginTapped(_ sender: Any) {
         
         // log in을 해야지만 homeViewController 으로 가기
         // sign up 한 유저인지 아닌지 본다.
+    
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             if error != nil {
                 print(error!.localizedDescription)
@@ -40,19 +32,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
 
         // 정보를 제대로 입력하지 않았을 때 Alert -> 5/12 장준혁 수정 밑에 else 코드 수정하면 됨
-        
+
 //        if emailTextField.text == "" || passwordTextField.text == "" {
 //            displayAlert(title: "정보를 기입해 주세요.", message: "이메일과 비밀번호를 모두 입력하셔야 합니다.")
-//        } else {
+        //        } else { // 5/12 장준혁 수정: 필요 없는 코드, 어차피 text가 비어있으면 버튼이 활성화 안됨
             if let email = emailTextField.text {
                 if let password = passwordTextField.text {
+
                     // LOG IN
                     Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                         if error == nil {
 //                            self.displayAlert(title:"로그인 되었습니다", message: "")
 //                            print("로그인 되었습니다.")
 //
-                            
+
 //                            let loginAlert = UIAlertController(title: "로그인 되었습니다.", message: "", preferredStyle: UIAlertControllerStyle.alert)
 //                            let loginAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default ) { action in
 ////                                self.dismiss(animated: true, completion: nil)
@@ -61,14 +54,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
 //                            }
 //                            loginAlert.addAction(loginAction)
 //                            self.present(loginAlert, animated: true, completion: nil)
-                            
-                            self.performSegue(withIdentifier: "signIntoHomeVC", sender: nil) // 5/12 장준혁 수정
+
+                            self.performSegue(withIdentifier: "signIntoHomeVC", sender: nil) // 5/12 장준혁 수정:로그인 alert 삭제함
                         } else {
-                            self.displayAlert(title: "오류", message: "이메일과 비밀번호를 모두 입력하셔야 합니다.")
+                            self.displayAlert(title: "로그인 오류", message: "이메일 또는 비밀번호를 다시 한 번 확인하십시오.") // 5/12 장준혁 수정:아이디, 비번 틀림 Alert
                         }
                     })
                 }}
-        }
+        
+        
+        
+    }
 
     override func viewDidLoad() {
         emailTextField.delegate = self
@@ -79,10 +75,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         handleTextField()
     }
 
-    
-    
-    
-    
     //로그인 양식(이메일, 비밀번호) 다 쓰기 전까지 로그인 버튼 비활성화
     func handleTextField() {
         emailTextField.addTarget(self, action: #selector(ViewController.textFieldDidChange), for: UIControlEvents.editingChanged)
@@ -136,6 +128,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //let signUpViewController = self.storyboard?.instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
     //self.present(SignupViewController, animated: true)
     
+    
+    //Alert 코드
+    func displayAlert(title:String, message:String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
     
 }
 

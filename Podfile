@@ -17,5 +17,9 @@ target 'imanager' do
 	
 	pod  "Floaty"," ~> 4.0.0"
 	pod 'Eureka'
+	
+	pod 'Fabric', '~> 1.7.5'
+        pod 'Crashlytics', '~> 3.10.1'
+
 
 end

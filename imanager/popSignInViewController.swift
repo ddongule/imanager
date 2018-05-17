@@ -55,7 +55,6 @@ class popSignInViewController: UIViewController, FBSDKLoginButtonDelegate, UIVie
                     })
                 }
             }
-            
         }
     }
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {

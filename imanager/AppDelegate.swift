@@ -27,6 +27,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    func handlePasswordlessSignIn(withURL url: URL) -> Bool {
+        let link = url.absoluteString
+        // [START is_signin_link]
+        if Auth.auth().isSignIn(withEmailLink: link) {
+            // [END is_signin_link]
+            UserDefaults.standard.set(link, forKey: "Link")
+            (window?.rootViewController as? UINavigationController)?.popToRootViewController(animated: false)
+            window?.rootViewController?.childViewControllers[0].performSegue(withIdentifier: "passwordless", sender: nil)
+            return true
+        }
+        return false
+    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

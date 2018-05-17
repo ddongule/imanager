@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D2EB0B547E95F110CEAA317 /* Pods_imanager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0693A506D70925E6F17ED5 /* Pods_imanager.framework */; };
 		5E37CCAF20A3F5E700C53B42 /* Mlist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E37CCAE20A3F5E700C53B42 /* Mlist.storyboard */; };
-		5E37CCED20A5603600C53B42 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E37CCEC20A5603600C53B42 /* GoogleService-Info.plist */; };
+		5ED8BE6620AD404F00420947 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5ED8BE6520AD404E00420947 /* GoogleService-Info.plist */; };
 		E60431FF2081EA1700963C01 /* CalendarThings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60431FE2081EA1700963C01 /* CalendarThings.swift */; };
 		E60432012082118200963C01 /* addCashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60432002082118200963C01 /* addCashViewController.swift */; };
 		E60432032083321300963C01 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60432022083321300963C01 /* FirstViewController.swift */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		3C0693A506D70925E6F17ED5 /* Pods_imanager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_imanager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E37CCAE20A3F5E700C53B42 /* Mlist.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mlist.storyboard; sourceTree = "<group>"; };
-		5E37CCEC20A5603600C53B42 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5ED8BE6520AD404E00420947 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A737DC12DDD0DCA957E57B49 /* Pods-imanager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imanager.release.xcconfig"; path = "Pods/Target Support Files/Pods-imanager/Pods-imanager.release.xcconfig"; sourceTree = "<group>"; };
 		CF938A2580FC8C2B78AF16B0 /* Pods-imanager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imanager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imanager/Pods-imanager.debug.xcconfig"; sourceTree = "<group>"; };
 		E60431FE2081EA1700963C01 /* CalendarThings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarThings.swift; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 				E6A6B8152075EA3400F7F17E /* Assets.xcassets */,
 				E6A6B8172075EA3400F7F17E /* LaunchScreen.storyboard */,
 				E6A6B81A2075EA3400F7F17E /* Info.plist */,
-				5E37CCEC20A5603600C53B42 /* GoogleService-Info.plist */,
+				5ED8BE6520AD404E00420947 /* GoogleService-Info.plist */,
 			);
 			path = imanager;
 			sourceTree = "<group>";
@@ -234,7 +234,7 @@
 				5E37CCAF20A3F5E700C53B42 /* Mlist.storyboard in Resources */,
 				E614B539208B2702007701E3 /* univ_major.json in Resources */,
 				E6A6B8142075EA3400F7F17E /* Main.storyboard in Resources */,
-				5E37CCED20A5603600C53B42 /* GoogleService-Info.plist in Resources */,
+				5ED8BE6620AD404F00420947 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,14 +460,14 @@
 				CODE_SIGN_ENTITLEMENTS = imanager/imanager.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZL4R92S7W8;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = imanager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.naver.jjh7091;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codershigh.imanage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -483,14 +483,14 @@
 				CODE_SIGN_ENTITLEMENTS = imanager/imanager.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZL4R92S7W8;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = imanager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.naver.jjh7091;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codershigh.imanage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
