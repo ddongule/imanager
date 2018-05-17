@@ -16,7 +16,8 @@ class clubSearchViewController: UIViewController,UITableViewDataSource, UITableV
     
     var originalClubList:[String] = Array()
     
-    var clubs:[String] = ["중앙동아리"]
+    var clubs:[String] = ["라켓단", "랑데부", "리베로", "미식축구부", "자이언츠", "LOVE 4T", "네비게이토", "CAM","CBA","CCC","CUSCM","SCA","가람터","누리울림","멜로스","블루드래곤","피카통","MuSE","RUBATO","라이너스","산악부","스키부","스킨스쿠버","요트부","하늘지기","날파람","쏜살","의혈검","중앙유도회","피트니스부","해동검도부","만화두레","문학동인회","미술시간","반영","사진연구회","중앙서예연구회","햇귀","사랑터","손짓사랑","푸름회","MIRA","RCY","레인보우피쉬","비꼼","지구인","휴머니즘","새날지기","영죽무대","청룡합창단","타박네","Da C-side", "댄스포즈", "M&M","민탈","소래얼","한백사위","가톨릭학생회","불교학생회","미생마","유스호스텔","BOCA","KUSA","UNSA","셈틀","CECC", "CECOM","CIEN","COMP","COSMOS","HAM","TRC","마인드피플","미제연","시가스펠리스","싸이클리","애니타임","프리스타일","화인법학회","CISSA 국제학학회","C-mash","CUDS","IVF","Journey","KOREA CLUB", "SEN"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

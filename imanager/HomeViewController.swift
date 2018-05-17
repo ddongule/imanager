@@ -26,11 +26,11 @@ class HomeViewController: UIViewController {
         //로그아웃 기능 일단 추가했는데 로그아웃 된지 어떻게 확인할까?
         do {
             try! Auth.auth().signOut()
-            
+
             if Auth.auth().currentUser == nil {
                 let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! FirstViewController
                 present(vc, animated: true, completion: nil)
-                print("작동?")
+//                displayAlert(title:"로그아웃 되었습니다", message: "")
             }
         } catch let error as NSError {
             displayAlert(title: "오류", message: error.localizedDescription)
