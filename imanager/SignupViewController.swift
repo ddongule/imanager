@@ -88,13 +88,14 @@ class SignupViewController: UIViewController, UITextFieldDelegate, MFMailCompose
             }
             Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
                 if error != nil {
-                    let emailNOTSentAlert = UIAlertController(title: "Email Verification", message: "Verification email failed to send:\(error?.localizedDescription)", preferredStyle: .alert); emailNOTSentAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil)); self.present(emailNOTSentAlert, animated: true, completion: nil)
+                    let emailNOTSentAlert = UIAlertController(title: "Email Verification", message: "Verification email failed to send:\(String(describing: error?.localizedDescription))", preferredStyle: .alert); emailNOTSentAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil)); self.present(emailNOTSentAlert, animated: true, completion: nil)
                 }else{
-                    let emailSentAlert = UIAlertController(title: "Email Verification", message: "Verification email has been sent. Please tap on the link in the email to verify your account before you can use the features in the app", preferredStyle: .alert)
-                    emailSentAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                    self.present(emailSentAlert, animated: true, completion: {
-                        self.dismiss(animated: true, completion: nil)
-                    })
+//                    let emailSentAlert = UIAlertController(title: "Email Verification", message: "Verification email has been sent. Please tap on the link in the email to verify your account before you can use the features in the app", preferredStyle: .alert)
+//                    emailSentAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//                    self.present(emailSentAlert, animated: true, completion: {
+//                        self.dismiss(animated: true, completion: nil)
+//                    })
+                    self.dismiss(animated: true, completion: nil)
                 }
                 do {
                     try Auth.auth().signOut()
@@ -194,7 +195,6 @@ class SignupViewController: UIViewController, UITextFieldDelegate, MFMailCompose
             textField.resignFirstResponder()
         }; return true
     }
-    
 
     
 }
