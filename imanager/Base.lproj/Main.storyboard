@@ -198,7 +198,7 @@
                                     <navigationItem title="홈" id="aCb-50-oPX">
                                         <barButtonItem key="leftBarButtonItem" title="로그아웃" id="xBI-LQ-vwM">
                                             <connections>
-                                                <action selector="signOutButtonTapped:" destination="kw5-RE-Tec" id="627-OQ-Tjk"/>
+                                                <action selector="signOutButtonTapped:" destination="kw5-RE-Tec" id="0wn-r2-uFg"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -459,7 +459,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="coO-dq-lfo">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="university@uni.ac.kr" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="coO-dq-lfo">
                                 <rect key="frame" x="16" y="185" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4zg-cd-dKS"/>
@@ -944,6 +944,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ycp-aE-hCm"/>
+        <segue reference="ecZ-q3-bmo"/>
     </inferredMetricsTieBreakers>
 </document>

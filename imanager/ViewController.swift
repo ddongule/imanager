@@ -39,7 +39,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
 //            print(user?.email) //이거 하면 user가 회원가입 햇는지 안햇는지 로그로 볼 수 있음
         }
 
-        // 정보를 제대로 입력하지 않았을 때 Alert
+        // 정보를 제대로 입력하지 않았을 때 Alert -> 5/12 장준혁 수정 밑에 else 코드 수정하면 됨
+        
 //        if emailTextField.text == "" || passwordTextField.text == "" {
 //            displayAlert(title: "정보를 기입해 주세요.", message: "이메일과 비밀번호를 모두 입력하셔야 합니다.")
 //        } else {
@@ -52,16 +53,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
 //                            print("로그인 되었습니다.")
 //
                             
-                            let loginAlert = UIAlertController(title: "로그인 되었습니다.", message: "", preferredStyle: UIAlertControllerStyle.alert)
-                            let loginAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default ) { action in
-//                                self.dismiss(animated: true, completion: nil)
-                                // 밑의 코드를 작성해야 home view controller로 이동한다.
-                                self.performSegue(withIdentifier: "signIntoHomeVC", sender: nil)
-                            }
-                            loginAlert.addAction(loginAction)
-                            self.present(loginAlert, animated: true, completion: nil)
+//                            let loginAlert = UIAlertController(title: "로그인 되었습니다.", message: "", preferredStyle: UIAlertControllerStyle.alert)
+//                            let loginAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default ) { action in
+////                                self.dismiss(animated: true, completion: nil)
+//                                // 밑의 코드를 작성해야 home view controller로 이동한다.
+//                                self.performSegue(withIdentifier: "signIntoHomeVC", sender: nil)
+//                            }
+//                            loginAlert.addAction(loginAction)
+//                            self.present(loginAlert, animated: true, completion: nil)
+                            
+                            self.performSegue(withIdentifier: "signIntoHomeVC", sender: nil) // 5/12 장준혁 수정
                         } else {
-                            self.displayAlert(title: "Error", message: error!.localizedDescription)
+                            self.displayAlert(title: "오류", message: "이메일과 비밀번호를 모두 입력하셔야 합니다.")
                         }
                     })
                 }}
