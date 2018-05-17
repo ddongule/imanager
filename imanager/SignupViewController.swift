@@ -33,7 +33,6 @@ class SignupViewController: UIViewController, UITextFieldDelegate, MFMailCompose
         self.dismiss(animated: true, completion: nil)
     }
     
-
     
     @IBOutlet weak var signUpButton: UIButton!   //버튼을 why? Outlet으로 만들었지?
     @IBAction func signUpTapped(_ sender: Any) {
