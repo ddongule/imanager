@@ -575,18 +575,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Be-jW-xJp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Be-jW-xJp">
                                 <rect key="frame" x="16" y="217" width="343" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="학생회"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zIc-le-GZh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="학생회">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="MQf-Kz-VaD" kind="show" id="JCO-1f-um1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YnM-ns-KhM">
-                                <rect key="frame" x="16" y="335" width="343" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="동아리"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YnM-ns-KhM">
+                                <rect key="frame" x="16" y="350" width="343" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="동아리">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="5yX-KT-5Me" kind="show" id="bD6-Bk-Qh4"/>
                                 </connections>
@@ -594,9 +601,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="HSD-WU-yBr" firstAttribute="bottom" secondItem="YnM-ns-KhM" secondAttribute="bottom" constant="282" id="9Ln-D8-Qt7"/>
+                            <constraint firstItem="3Be-jW-xJp" firstAttribute="leading" secondItem="YnM-ns-KhM" secondAttribute="leading" id="9Zs-OP-sYH"/>
                             <constraint firstItem="0YT-hr-jFG" firstAttribute="leading" secondItem="HSD-WU-yBr" secondAttribute="leading" id="HJs-Lz-qWq"/>
                             <constraint firstItem="HSD-WU-yBr" firstAttribute="trailing" secondItem="0YT-hr-jFG" secondAttribute="trailing" id="JeV-Im-rE4"/>
+                            <constraint firstItem="3Be-jW-xJp" firstAttribute="trailing" secondItem="YnM-ns-KhM" secondAttribute="trailing" id="SfZ-ZP-AWO"/>
+                            <constraint firstItem="YnM-ns-KhM" firstAttribute="top" secondItem="3Be-jW-xJp" secondAttribute="bottom" constant="83" id="XHl-l1-Dys"/>
                             <constraint firstItem="0YT-hr-jFG" firstAttribute="top" secondItem="HSD-WU-yBr" secondAttribute="top" constant="40" id="dn0-bx-SCT"/>
+                            <constraint firstItem="YnM-ns-KhM" firstAttribute="leading" secondItem="HSD-WU-yBr" secondAttribute="leading" constant="16" id="f90-fW-Acm"/>
+                            <constraint firstItem="HSD-WU-yBr" firstAttribute="trailing" secondItem="YnM-ns-KhM" secondAttribute="trailing" constant="16" id="muE-tc-tOy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HSD-WU-yBr"/>
                     </view>
@@ -694,42 +707,6 @@
                                     <segue destination="ek9-ln-3eJ" kind="show" id="382-fi-qpG"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vta-2y-Zt7">
-                                <rect key="frame" x="16" y="388" width="343" height="259"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKR-bK-JXn">
-                                        <rect key="frame" x="8" y="69" width="327" height="120"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="22"/>
-                                        <state key="normal" title="카카오톡으로 로그인 하기">
-                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3w-Vw-uhR">
-                                        <rect key="frame" x="8" y="204" width="327" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="327" id="Xue-2o-heG"/>
-                                            <constraint firstAttribute="height" constant="40" id="frQ-iT-vih"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="22"/>
-                                        <state key="normal" title="이메일 로그인">
-                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="signIntoHomeVC" id="LgW-oy-HeX"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.99607843139999996" green="0.77647058820000003" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="n3w-Vw-uhR" firstAttribute="top" relation="lessThanOrEqual" secondItem="LKR-bK-JXn" secondAttribute="bottom" constant="15" id="024-dR-3P9"/>
-                                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="n3w-Vw-uhR" secondAttribute="bottom" constant="15" id="6lv-IB-bOf"/>
-                                    <constraint firstItem="LKR-bK-JXn" firstAttribute="leading" secondItem="n3w-Vw-uhR" secondAttribute="leading" id="dg6-Pv-faa"/>
-                                    <constraint firstItem="n3w-Vw-uhR" firstAttribute="leading" secondItem="vta-2y-Zt7" secondAttribute="leading" constant="8" id="kfT-T1-5fV"/>
-                                    <constraint firstItem="LKR-bK-JXn" firstAttribute="centerY" secondItem="vta-2y-Zt7" secondAttribute="centerY" id="mvW-UE-Ffp"/>
-                                    <constraint firstItem="LKR-bK-JXn" firstAttribute="trailing" secondItem="n3w-Vw-uhR" secondAttribute="trailing" id="qft-Xd-b0A"/>
-                                    <constraint firstAttribute="trailing" secondItem="n3w-Vw-uhR" secondAttribute="trailing" constant="8" id="xRN-3j-Xex"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRk-WQ-Mdp" customClass="UIRoundPrimaryButton" customModule="imanager" customModuleProvider="target">
                                 <rect key="frame" x="98" y="207" width="178" height="38"/>
                                 <color key="backgroundColor" red="1" green="0.78039215689999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -743,19 +720,15 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginAdminButtonPressed:" destination="Slg-ih-kCy" eventType="touchUpInside" id="yg0-lv-dbX"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="zeu-bL-7xn"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="FRk-WQ-Mdp" firstAttribute="leading" secondItem="poh-rP-X8P" secondAttribute="leading" constant="98.5" id="Cnt-vd-bc8"/>
-                            <constraint firstAttribute="bottom" secondItem="vta-2y-Zt7" secondAttribute="bottom" constant="20" symbolic="YES" id="LaK-5B-Saw"/>
-                            <constraint firstItem="vta-2y-Zt7" firstAttribute="leading" secondItem="nlV-PP-qoe" secondAttribute="leadingMargin" id="P1G-Mq-kE0"/>
                             <constraint firstItem="poh-rP-X8P" firstAttribute="trailing" secondItem="FRk-WQ-Mdp" secondAttribute="trailing" constant="98.5" id="QP0-x2-8w9"/>
                             <constraint firstItem="f1m-Fc-FN3" firstAttribute="top" secondItem="FRk-WQ-Mdp" secondAttribute="bottom" constant="43" id="bnM-fX-rtB"/>
-                            <constraint firstItem="vta-2y-Zt7" firstAttribute="top" secondItem="f1m-Fc-FN3" secondAttribute="bottom" constant="64" id="ddw-fu-AmZ"/>
-                            <constraint firstItem="vta-2y-Zt7" firstAttribute="centerX" secondItem="f1m-Fc-FN3" secondAttribute="centerX" id="goO-1h-hg0"/>
                             <constraint firstItem="FRk-WQ-Mdp" firstAttribute="top" secondItem="poh-rP-X8P" secondAttribute="top" constant="187" id="j05-UQ-T89"/>
                             <constraint firstItem="poh-rP-X8P" firstAttribute="trailing" secondItem="f1m-Fc-FN3" secondAttribute="trailing" constant="98.5" id="lQE-WA-G6X"/>
                             <constraint firstItem="f1m-Fc-FN3" firstAttribute="leading" secondItem="poh-rP-X8P" secondAttribute="leading" constant="98.5" id="orf-SU-jjo"/>
@@ -763,8 +736,6 @@
                         <viewLayoutGuide key="safeArea" id="poh-rP-X8P"/>
                     </view>
                     <connections>
-                        <outlet property="loginAdminButton" destination="FRk-WQ-Mdp" id="XOZ-tK-nPd"/>
-                        <outlet property="loginView" destination="vta-2y-Zt7" id="eqj-X5-oV1"/>
                         <segue destination="kw5-RE-Tec" kind="presentation" identifier="signInFB" id="ecZ-q3-bmo"/>
                     </connections>
                 </viewController>
@@ -869,6 +840,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ycp-aE-hCm"/>
+        <segue reference="ecZ-q3-bmo"/>
     </inferredMetricsTieBreakers>
 </document>
